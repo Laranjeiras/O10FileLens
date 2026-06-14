@@ -73,7 +73,7 @@ vsce package
 `vsce` will:
 1. Run `npm run compile` via the `vscode:prepublish` script
 2. Package everything (except `node_modules`, test `out/`, etc.)
-3. Generate the file: `o10-filelens-1.1.1.vsix` in the project root
+3. Generate the file: `o10-filelens-1.2.0.vsix` in the project root
 
 ---
 
@@ -82,7 +82,7 @@ vsce package
 ### Via command line
 
 ```powershell
-code --install-extension o10-filelens-1.1.1.vsix
+code --install-extension o10-filelens-1.2.0.vsix
 ```
 
 ### Via the VS Code UI
@@ -90,7 +90,7 @@ code --install-extension o10-filelens-1.1.1.vsix
 1. Open the **Extensions** panel (`Ctrl+Shift+X`)
 2. Click the `···` menu (top-right corner of the panel)
 3. Select **Install from VSIX...**
-4. Navigate to the `o10-filelens-1.1.1.vsix` file and confirm
+4. Navigate to the `o10-filelens-1.2.0.vsix` file and confirm
 
 ---
 
@@ -115,7 +115,7 @@ npm install
 vsce package
 
 # 4. Install
-code --install-extension o10-filelens-1.1.1.vsix
+code --install-extension o10-filelens-1.2.0.vsix
 ```
 
 ---
