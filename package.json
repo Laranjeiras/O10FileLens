@@ -2,7 +2,7 @@
   "name": "o10-filelens",
   "displayName": "O10-FileLens",
   "description": "Shows the file insights in the Explorer tooltip and editor hover",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "publisher": "Orenji10",
   "author": {
     "name": "Orenji10"
@@ -15,6 +15,30 @@
     "onStartupFinished"
   ],
   "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "O10-FileLens",
+      "properties": {
+        "o10-filelens.tokenCount.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show the estimated AI token count and character count in file insights (Explorer tooltip and editor hover)."
+        },
+        "o10-filelens.tokenCount.charsPerToken": {
+          "type": "number",
+          "default": 3.5,
+          "minimum": 1,
+          "description": "Average characters per token used to estimate Claude token counts. Lower values yield higher token estimates."
+        },
+        "o10-filelens.tokenCount.maxFileSizeKB": {
+          "type": "number",
+          "default": 1024,
+          "minimum": 1,
+          "description": "Maximum file size (in KB) to read for token estimation. Larger files skip the token count to stay fast."
+        }
+      }
+    }
+  },
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
